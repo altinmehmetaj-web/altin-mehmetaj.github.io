@@ -1,158 +1,289 @@
-// Smooth scrolling for navigation links
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for all anchor links
-    const links = document.querySelectorAll('a[href^="#"]');
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Influencer - Cashback Every Day and Everywhere</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/6b43f310-ec3c-4cb0-bb73-7aa13e8c5bb5.png" type="image/png">
+</head>
+<body>
+    <!-- Video Hero Section -->
+    <section class="hero-video">
+        <div class="video-container">
+            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/7a682302-b9fd-4a11-bcfb-11451b122c3f.png" 
+                 alt="Success Mountain" class="hero-image">
+            <div class="video-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title">Raggiungi la Vetta del Successo</h1>
+                    <p class="hero-subtitle">Con il cashback ogni giorno e ovunque</p>
+                    <button class="cta-button" onclick="scrollToMain()">Inizia Ora</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Header -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/6b43f310-ec3c-4cb0-bb73-7aa13e8c5bb5.png" alt="Shopping Influencer" class="logo-badge">
+                    <div class="logo-text">
+                        <h2>Shopping Influencer</h2>
+                        <span class="tagline">Cashback ogni giorno</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#cashback">Cashback</a></li>
+                    <li><a href="#shopping">Shopping</a></li>
+                    <li><a href="#contact">Contatti</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/shoppingxinfluencer?igsh=aDV6c3lvYmhidmd1&utm_source=qr" aria-label="Instagram" target="_blank" rel="noopener">📸</a>
+                    <a href="https://www.tiktok.com/@shoppingxinfluencer?_t=ZN-8ziTAVHLFcU&_r=1" aria-label="TikTok" target="_blank" rel="noopener">🎵</a>
+                    <a href="https://www.youtube.com/@shoppinginfluencer" aria-label="YouTube" target="_blank" rel="noopener">▶️</a>
+                    <a href="https://www.facebook.com/share/14KCtBjd5vN/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener">📘</a>
+                </div>
+            </nav>
+        </header>
 
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Cashback Ogni Giorno e Da Per Tutto</h1>
+                <p>Scopri come guadagnare mentre fai shopping online con le migliori offerte cashback disponibili!</p>
+                <div class="cta-buttons">
+                    <a href="#cashback" class="btn-primary">Inizia a Guadagnare</a>
+                    <a href="#shopping" class="btn-secondary">Scopri le Offerte</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Shopping Cashback">
+            </div>
+        </section>
 
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
+        <!-- Cashback Section -->
+        <section id="cashback" class="section">
+            <div class="container">
+                <h2>Come Funziona il Cashback</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🛒</div>
+                        <h3>Fai Shopping</h3>
+                        <p>Acquista dai tuoi negozi preferiti attraverso i nostri link partner</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Guadagna Cashback</h3>
+                        <p>Ricevi una percentuale di rimborso su ogni acquisto effettuato</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎁</div>
+                        <h3>Ritira i Guadagni</h3>
+                        <p>Trasferisci i tuoi guadagni direttamente sul tuo conto bancario</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    // Parallax effect for hero video
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const parallax = document.querySelector('.hero-image');
+        <!-- Shopping Section -->
+        <section id="shopping" class="section bg-light">
+            <div class="container">
+                <h2>I Nostri Partner Shopping</h2>
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Fashion Store">
+                        <h3>Moda & Abbigliamento</h3>
+                        <p>Fino al 8% di cashback</p>
+                        <a href="#" class="shop-now-btn">Acquista Ora</a>
+                    </div>
+                    <div class="partner-card">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Electronics">
+                        <h3>Elettronica</h3>
+                        <p>Fino al 5% di cashback</p>
+                        <a href="#" class="shop-now-btn">Acquista Ora</a>
+                    </div>
+                    <div class="partner-card">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Home & Garden">
+                        <h3>Casa & Giardino</h3>
+                        <p>Fino al 6% di cashback</p>
+                        <a href="#" class="shop-now-btn">Acquista Ora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        if (parallax) {
-            const speed = scrolled * 0.5;
-            parallax.style.transform = `translateY(${speed}px)`;
-        }
-    });
+        <!-- App Download Section -->
+        <section class="app-download">
+            <div class="container">
+                <div class="app-content">
+                    <div class="app-info">
+                        <h2>Scarica la Nostra App</h2>
+                        <p>Accedi ai tuoi cashback ovunque tu sia con la nostra app mobile gratuita.</p>
+                        <div class="app-benefits">
+                            <div class="benefit">
+                                <span class="benefit-icon">📱</span>
+                                <span>Notifiche per nuove offerte</span>
+                            </div>
+                            <div class="benefit">
+                                <span class="benefit-icon">⚡</span>
+                                <span>Accesso rapido ai cashback</span>
+                            </div>
+                            <div class="benefit">
+                                <span class="benefit-icon">🎯</span>
+                                <span>Offerte personalizzate</span>
+                            </div>
+                        </div>
+                        <div class="app-buttons">
+                            <a href="#" class="app-store-btn">
+                                <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Download su App Store">
+                            </a>
+                            <a href="#" class="google-play-btn">
+                                <img src="https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Download su Google Play">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="app-mockup">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="App Mockup">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    // Fade in animation on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+        <!-- Trust Section -->
+        <section class="trust-section section">
+            <div class="container">
+                <div class="trust-content">
+                    <div class="trust-logo">
+                        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/6b43f310-ec3c-4cb0-bb73-7aa13e8c5bb5.png" alt="Shopping Influencer" class="trust-badge">
+                    </div>
+                    <div class="trust-text">
+                        <h2>Perché Scegliere Shopping Influencer?</h2>
+                        <div class="trust-stats">
+                            <div class="stat">
+                                <h3>10,000+</h3>
+                                <p>Utenti Attivi</p>
+                            </div>
+                            <div class="stat">
+                                <h3>€500K+</h3>
+                                <p>Cashback Erogati</p>
+                            </div>
+                            <div class="stat">
+                                <h3>150+</h3>
+                                <p>Partner Attivi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contattaci</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@shoppinginfluencer.shop</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h3>Telefono</h3>
+                                <p>+39 351 811 2387</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h3>Ubicazione</h3>
+                                <p>Italia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" placeholder="Nome" required>
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Messaggio" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Invia Messaggio</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    // Observe all feature cards and partner cards
-    const animatedElements = document.querySelectorAll('.feature-card, .partner-card, .contact-item');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-});
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section footer-brand">
+                        <div class="footer-logo">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/6b43f310-ec3c-4cb0-bb73-7aa13e8c5bb5.png" alt="Shopping Influencer" class="footer-logo-badge">
+                            <div class="footer-brand-text">
+                                <h3>Shopping Influencer</h3>
+                                <p>Cashback ogni giorno e ovunque</p>
+                            </div>
+                        </div>
+                        <p class="footer-description">La tua piattaforma di fiducia per guadagnare cashback su ogni acquisto online. Unisciti a migliaia di utenti che hanno già iniziato a risparmiare.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Link Utili</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#cashback">Come Funziona</a></li>
+                            <li><a href="#shopping">Partner</a></li>
+                            <li><a href="#contact">Contatti</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Seguici sui Social</h3>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/14KCtBjd5vN/?mibextid=wwXIfr" class="social-link" target="_blank" rel="noopener">
+                                <span>📘</span> Facebook
+                            </a>
+                            <a href="https://www.instagram.com/shoppingxinfluencer?igsh=aDV6c3lvYmhidmd1&utm_source=qr" class="social-link" target="_blank" rel="noopener">
+                                <span>📸</span> Instagram
+                            </a>
+                            <a href="https://www.tiktok.com/@shoppingxinfluencer?_t=ZN-8ziTAVHLFcU&_r=1" class="social-link" target="_blank" rel="noopener">
+                                <span>🎵</span> TikTok
+                            </a>
+                            <a href="https://www.youtube.com/@shoppinginfluencer" class="social-link" target="_blank" rel="noopener">
+                                <span>▶️</span> YouTube
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <div class="footer-copyright">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/6b43f310-ec3c-4cb0-bb73-7aa13e8c5bb5.png" alt="Shopping Influencer" class="footer-small-logo">
+                            <p>&copy; 2025 Shopping Influencer. Tutti i diritti riservati.</p>
+                        </div>
+                        <div class="footer-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Termini di Servizio</a>
+                            <a href="#">Cookie Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
 
-// Function to scroll to main content from hero video
-function scrollToMain() {
-    const mainContent = document.getElementById('main-content');
-    if (mainContent) {
-        mainContent.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
-}
-
-// Mobile menu toggle (if needed)
-function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-}
-
-// Form submission handler
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('.contact-form form');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = new FormData(this);
-            const name = this.querySelector('input[type="text"]').value;
-            const email = this.querySelector('input[type="email"]').value;
-            const message = this.querySelector('textarea').value;
-
-            // Simulate form submission
-            alert(`Grazie ${name}! Il tuo messaggio è stato inviato con successo. Ti contatteremo presto all'indirizzo ${email}.`);
-
-            // Reset form
-            this.reset();
-        });
-    }
-});
-
-// Add loading animation
-window.addEventListener('load', function() {
-    const heroTitle = document.querySelector('.hero-title');
-    const heroSubtitle = document.querySelector('.hero-subtitle');
-    const ctaButton = document.querySelector('.cta-button');
-
-    // Trigger animations after page load
-    setTimeout(() => {
-        if (heroTitle) heroTitle.style.animationPlayState = 'running';
-        if (heroSubtitle) heroSubtitle.style.animationPlayState = 'running';
-        if (ctaButton) ctaButton.style.animationPlayState = 'running';
-    }, 100);
-});
-
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    const scrollPosition = window.scrollY;
-
-    if (scrollPosition > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.backdropFilter = 'blur(10px)';
-    } else {
-        header.style.background = '#fff';
-        header.style.backdropFilter = 'none';
-    }
-});
-
-// Counter animation for statistics (if added later)
-function animateCounter(element, target, duration = 2000) {
-    let start = 0;
-    const increment = target / (duration / 16);
-
-    const timer = setInterval(() => {
-        start += increment;
-        element.textContent = Math.floor(start);
-
-        if (start >= target) {
-            element.textContent = target;
-            clearInterval(timer);
-        }
-    }, 16);
-}
-
-// Image lazy loading fallback
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img[data-src]');
-
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
-});
+    <script src="app.js"></script>
+</body>
+</html>
