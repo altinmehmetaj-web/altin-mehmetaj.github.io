@@ -1,340 +1,158 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cashback Ogni Giorno e da Per Tutto - Altin Mehmetaj</title>
-    <meta name="description" content="Ottieni cashback su ogni acquisto online e offline. Oltre 10 milioni di aziende partner. Primo mese gratuito, poi solo 4,90€/mese.">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h2>Altin Mehmetaj</h2>
-                    <span class="subtitle">creators & influencer shopping</span>
-                </div>
-                <nav class="nav">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#vantaggi" class="nav-link">Vantaggi</a>
-                    <a href="#prezzi" class="nav-link">Prezzi</a>
-                    <a href="#come-funziona" class="nav-link">Come Funziona</a>
-                    <a href="#contatti" class="nav-link">Contatti</a>
-                </nav>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
+// Smooth scrolling for navigation links
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for all anchor links
+    const links = document.querySelectorAll('a[href^="#"]');
 
-    <!-- Mobile Menu -->
-    <nav class="mobile-nav hidden" id="mobileNav">
-        <a href="#home" class="mobile-nav-link" onclick="closeMobileMenu()">Home</a>
-        <a href="#vantaggi" class="mobile-nav-link" onclick="closeMobileMenu()">Vantaggi</a>
-        <a href="#prezzi" class="mobile-nav-link" onclick="closeMobileMenu()">Prezzi</a>
-        <a href="#come-funziona" class="mobile-nav-link" onclick="closeMobileMenu()">Come Funziona</a>
-        <a href="#contatti" class="mobile-nav-link" onclick="closeMobileMenu()">Contatti</a>
-    </nav>
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Cashback Ogni Giorno e da Per Tutto</h1>
-                    <p class="hero-subtitle">Guadagna cashback su ogni acquisto, online e offline, con oltre 10 milioni di aziende partner in tutto il mondo.</p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">10M+</span>
-                            <span class="stat-label">Aziende Partner</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">5-15€</span>
-                            <span class="stat-label">Cashback Mensile</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">4,90€</span>
-                            <span class="stat-label">Solo al Mese</span>
-                        </div>
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="https://shp.skai1.com/register/V2tPSHpDZXA3YmhlNW5ScTpN" target="_blank" class="btn btn--primary btn--lg">
-                            Inizia Subito Gratis
-                        </a>
-                        <button class="btn btn--secondary btn--lg" onclick="scrollToSection('come-funziona')">
-                            Scopri Come Funziona
-                        </button>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://pplx-res.cloudinary.com/image/upload/v1757661241/pplx_project_search_images/45972f90c7253872562afb5559a989aa80928965.png" alt="Shopping online e offline" class="hero-img">
-                </div>
-            </div>
-        </div>
-    </section>
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Il Futuro dello Shopping è Qui</h2>
-                    <p>Con la nostra app Cashbackapp, trasforma ogni acquisto in un'opportunità di risparmio. Che tu stia comprando online o in negozio, ricevi sempre un cashback garantito.</p>
-                    <ul class="about-features">
-                        <li>✓ Cashback su acquisti online e offline</li>
-                        <li>✓ Oltre 10 milioni di aziende partner</li>
-                        <li>✓ Primo mese completamente gratuito</li>
-                        <li>✓ App mobile disponibile</li>
-                        <li>✓ Pagamenti sicuri e garantiti</li>
-                    </ul>
-                </div>
-                <div class="about-image">
-                    <img src="https://pplx-res.cloudinary.com/image/upload/v1757660028/pplx_project_search_images/85c66596583e7e8ef598a424b9b4935d82de3bd8.png" alt="App Cashback Mobile" class="about-img">
-                </div>
-            </div>
-        </div>
-    </section>
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 
-    <!-- Benefits Section -->
-    <section id="vantaggi" class="benefits">
-        <div class="container">
-            <h2 class="section-title">Perché Scegliere il Nostro Cashback</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">💰</div>
-                    <h3>Risparmio Garantito</h3>
-                    <p>Ottieni cashback su ogni acquisto, sia online che in negozio</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🌍</div>
-                    <h3>Rete Estesa</h3>
-                    <p>Oltre 10 milioni di aziende partner in tutto il mondo</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🆓</div>
-                    <h3>Prova Gratuita</h3>
-                    <p>Primo mese completamente gratuito per testare il servizio</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">💸</div>
-                    <h3>Conveniente</h3>
-                    <p>Solo 4,90€ al mese per vantaggi illimitati dopo il periodo di prova</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    // Parallax effect for hero video
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const parallax = document.querySelector('.hero-image');
 
-    <!-- Pricing Section -->
-    <section id="prezzi" class="pricing">
-        <div class="container">
-            <h2 class="section-title">Piani Tariffari Semplici e Convenienti</h2>
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Prova Gratuita</h3>
-                        <div class="price">
-                            <span class="price-amount">0€</span>
-                            <span class="price-period">primo mese</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ Cashback 5-15€ al mese</li>
-                        <li>✓ Accesso a tutte le aziende partner</li>
-                        <li>✓ App mobile gratuita</li>
-                        <li>✓ Nessun impegno</li>
-                    </ul>
-                    <a href="https://shp.skai1.com/register/V2tPSHpDZXA3YmhlNW5ScTpN" target="_blank" class="btn btn--outline btn--full-width">Inizia Gratis</a>
-                </div>
-                <div class="pricing-card pricing-card--featured">
-                    <div class="pricing-badge">Più Popolare</div>
-                    <div class="pricing-header">
-                        <h3>Piano Premium</h3>
-                        <div class="price">
-                            <span class="price-amount">4,90€</span>
-                            <span class="price-period">al mese</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ Cashback illimitato</li>
-                        <li>✓ Vantaggi esclusivi</li>
-                        <li>✓ Supporto prioritario</li>
-                        <li>✓ Notifiche personalizzate</li>
-                        <li>✓ Statistiche avanzate</li>
-                    </ul>
-                    <a href="https://shp.skai1.com/register/V2tPSHpDZXA3YmhlNW5ScTpN" target="_blank" class="btn btn--primary btn--full-width">Attiva Premium</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        if (parallax) {
+            const speed = scrolled * 0.5;
+            parallax.style.transform = `translateY(${speed}px)`;
+        }
+    });
 
-    <!-- How It Works Section -->
-    <section id="come-funziona" class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Come Funziona in 4 Semplici Passi</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Registrati Gratuitamente</h3>
-                        <p>Crea il tuo account gratuito e inizia subito a risparmiare</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Fai Acquisti</h3>
-                        <p>Compra nei tuoi negozi preferiti online e offline</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Guadagna Cashback</h3>
-                        <p>Ricevi automaticamente il cashback su ogni acquisto</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Incassa i Risparmi</h3>
-                        <p>Trasferisci i tuoi guadagni direttamente sul conto</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    // Fade in animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Cosa Dicono i Nostri Clienti</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"Fantastico! Ho già risparmiato oltre 150€ nei primi tre mesi. L'app è semplicissima da usare."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <strong>Marco R.</strong>
-                        <span>Cliente Premium</span>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"Il cashback arriva sempre puntuale. Perfetto per gli acquisti quotidiani e per lo shopping online."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <strong>Giulia S.</strong>
-                        <span>Cliente Premium</span>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"Dopo il primo mese gratuito non ho più potuto farne a meno. Vale ogni centesimo!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <strong>Alessandro T.</strong>
-                        <span>Cliente Premium</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
 
-    <!-- Contact Section -->
-    <section id="contatti" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contattami</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Altin Mehmetaj</h3>
-                    <p class="contact-subtitle">Creators & Influencer Shopping</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="contact-icon">📱</span>
-                            <div>
-                                <strong>Telefono</strong>
-                                <a href="tel:3518112387">3518112387</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">✉️</span>
-                            <div>
-                                <strong>Email</strong>
-                                <a href="mailto:altin.shopping.influencer@gmail.com">altin.shopping.influencer@gmail.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" onsubmit="handleFormSubmit(event)">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Nome</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Messaggio</label>
-                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full-width">Invia Messaggio</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    // Observe all feature cards and partner cards
+    const animatedElements = document.querySelectorAll('.feature-card, .partner-card, .contact-item');
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+});
 
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h3>Resta Aggiornato</h3>
-                <p>Iscriviti alla newsletter per ricevere le migliori offerte cashback</p>
-                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
-                    <input type="email" placeholder="La tua email" class="form-control newsletter-input" required>
-                    <button type="submit" class="btn btn--primary">Iscriviti</button>
-                </form>
-            </div>
-        </div>
-    </section>
+// Function to scroll to main content from hero video
+function scrollToMain() {
+    const mainContent = document.getElementById('main-content');
+    if (mainContent) {
+        mainContent.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Altin Mehmetaj</h4>
-                    <p>Creators & Influencer Shopping</p>
-                    <p>Il tuo partner per il cashback shopping</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Contatti</h4>
-                    <p>📱 <a href="tel:3518112387">3518112387</a></p>
-                    <p>✉️ <a href="mailto:altin.shopping.influencer@gmail.com">altin.shopping.influencer@gmail.com</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Link Rapidi</h4>
-                    <a href="#home">Home</a>
-                    <a href="#vantaggi">Vantaggi</a>
-                    <a href="#prezzi">Prezzi</a>
-                    <a href="#come-funziona">Come Funziona</a>
-                </div>
-                <div class="footer-section">
-                    <h4>App</h4>
-                    <a href="https://shp.skai1.com/register/V2tPSHpDZXA3YmhlNW5ScTpN" target="_blank" class="btn btn--primary btn--sm">Scarica l'App</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Altin Mehmetaj. Tutti i diritti riservati.</p>
-            </div>
-        </div>
-    </footer>
+// Mobile menu toggle (if needed)
+function toggleMobileMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
 
-    <script src="app.js"></script>
-</body>
-</html>
+// Form submission handler
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form form');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const message = this.querySelector('textarea').value;
+
+            // Simulate form submission
+            alert(`Grazie ${name}! Il tuo messaggio è stato inviato con successo. Ti contatteremo presto all'indirizzo ${email}.`);
+
+            // Reset form
+            this.reset();
+        });
+    }
+});
+
+// Add loading animation
+window.addEventListener('load', function() {
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    const ctaButton = document.querySelector('.cta-button');
+
+    // Trigger animations after page load
+    setTimeout(() => {
+        if (heroTitle) heroTitle.style.animationPlayState = 'running';
+        if (heroSubtitle) heroSubtitle.style.animationPlayState = 'running';
+        if (ctaButton) ctaButton.style.animationPlayState = 'running';
+    }, 100);
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.backdropFilter = 'blur(10px)';
+    } else {
+        header.style.background = '#fff';
+        header.style.backdropFilter = 'none';
+    }
+});
+
+// Counter animation for statistics (if added later)
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+
+    const timer = setInterval(() => {
+        start += increment;
+        element.textContent = Math.floor(start);
+
+        if (start >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        }
+    }, 16);
+}
+
+// Image lazy loading fallback
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img[data-src]');
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+});
