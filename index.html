@@ -3,212 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Influencer - Cashback Every Day and Everywhere</title>
+    <title>Cashback Ogni Giorno e da Per Tutto - Altin Mehmetaj</title>
+    <meta name="description" content="Ottieni cashback su ogni acquisto online e offline. Oltre 10 milioni di aziende partner. Primo mese gratuito, poi solo 4,90€/mese.">
     <link rel="stylesheet" href="style.css">
-    <!-- Favicon -->
-    <link rel="icon" href="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/6b43f310-ec3c-4cb0-bb73-7aa13e8c5bb5.png" type="image/png">
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">
-                <h2>Shopping Influencer</h2>
-                <span class="tagline">Cashback ogni giorno</span>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h2>Altin Mehmetaj</h2>
+                    <span class="subtitle">creators & influencer shopping</span>
+                </div>
+                <nav class="nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#vantaggi" class="nav-link">Vantaggi</a>
+                    <a href="#prezzi" class="nav-link">Prezzi</a>
+                    <a href="#come-funziona" class="nav-link">Come Funziona</a>
+                    <a href="#contatti" class="nav-link">Contatti</a>
+                </nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#cashback">Cashback</a></li>
-                <li><a href="#shopping">Shopping</a></li>
-                <li><a href="#contact">Contatti</a></li>
-            </ul>
-        </nav>
+        </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-nav hidden" id="mobileNav">
+        <a href="#home" class="mobile-nav-link" onclick="closeMobileMenu()">Home</a>
+        <a href="#vantaggi" class="mobile-nav-link" onclick="closeMobileMenu()">Vantaggi</a>
+        <a href="#prezzi" class="mobile-nav-link" onclick="closeMobileMenu()">Prezzi</a>
+        <a href="#come-funziona" class="mobile-nav-link" onclick="closeMobileMenu()">Come Funziona</a>
+        <a href="#contatti" class="mobile-nav-link" onclick="closeMobileMenu()">Contatti</a>
+    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Cashback Ogni Giorno e Da Per Tutto</h1>
-            <p>Scopri come guadagnare mentre fai shopping online con le migliori offerte cashback disponibili!</p>
-            <div class="cta-buttons">
-                <a href="#cashback" class="btn-primary">Inizia a Guadagnare</a>
-                <a href="#shopping" class="btn-secondary">Scopri le Offerte</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Shopping Cashback">
-        </div>
-    </section>
-
-    <!-- Cashback Section -->
-    <section id="cashback" class="section">
         <div class="container">
-            <h2>Come Funziona il Cashback</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🛒</div>
-                    <h3>Fai Shopping</h3>
-                    <p>Acquista dai tuoi negozi preferiti attraverso i nostri link partner</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Guadagna Cashback</h3>
-                    <p>Ricevi una percentuale di rimborso su ogni acquisto effettuato</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎁</div>
-                    <h3>Ritira i Guadagni</h3>
-                    <p>Trasferisci i tuoi guadagni direttamente sul tuo conto bancario</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Shopping Section -->
-    <section id="shopping" class="section bg-light">
-        <div class="container">
-            <h2>I Nostri Partner Shopping</h2>
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Fashion Store">
-                    <h3>Moda & Abbigliamento</h3>
-                    <p>Fino al 8% di cashback</p>
-                    <a href="#" class="shop-now-btn">Acquista Ora</a>
-                </div>
-                <div class="partner-card">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Electronics">
-                    <h3>Elettronica</h3>
-                    <p>Fino al 5% di cashback</p>
-                    <a href="#" class="shop-now-btn">Acquista Ora</a>
-                </div>
-                <div class="partner-card">
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Home & Garden">
-                    <h3>Casa & Giardino</h3>
-                    <p>Fino al 6% di cashback</p>
-                    <a href="#" class="shop-now-btn">Acquista Ora</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- App Download Section -->
-    <section class="app-download">
-        <div class="container">
-            <div class="app-content">
-                <div class="app-info">
-                    <h2>Scarica la Nostra App</h2>
-                    <p>Accedi ai tuoi cashback ovunque tu sia con la nostra app mobile gratuita.</p>
-                    <div class="app-benefits">
-                        <div class="benefit">
-                            <span class="benefit-icon">📱</span>
-                            <span>Notifiche per nuove offerte</span>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Cashback Ogni Giorno e da Per Tutto</h1>
+                    <p class="hero-subtitle">Guadagna cashback su ogni acquisto, online e offline, con oltre 10 milioni di aziende partner in tutto il mondo.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">10M+</span>
+                            <span class="stat-label">Aziende Partner</span>
                         </div>
-                        <div class="benefit">
-                            <span class="benefit-icon">⚡</span>
-                            <span>Accesso rapido ai cashback</span>
+                        <div class="stat">
+                            <span class="stat-number">5-15€</span>
+                            <span class="stat-label">Cashback Mensile</span>
                         </div>
-                        <div class="benefit">
-                            <span class="benefit-icon">🎯</span>
-                            <span>Offerte personalizzate</span>
+                        <div class="stat">
+                            <span class="stat-number">4,90€</span>
+                            <span class="stat-label">Solo al Mese</span>
                         </div>
                     </div>
-                    <div class="app-buttons">
-                        <a href="#" class="app-store-btn">
-                            <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Download su App Store">
+                    <div class="hero-buttons">
+                        <a href="https://shp.skai1.com/register/V2tPSHpDZXA3YmhlNW5ScTpN" target="_blank" class="btn btn--primary btn--lg">
+                            Inizia Subito Gratis
                         </a>
-                        <a href="#" class="google-play-btn">
-                            <img src="https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Download su Google Play">
-                        </a>
+                        <button class="btn btn--secondary btn--lg" onclick="scrollToSection('come-funziona')">
+                            Scopri Come Funziona
+                        </button>
                     </div>
                 </div>
-                <div class="app-mockup">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="App Mockup">
+                <div class="hero-image">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1757661241/pplx_project_search_images/45972f90c7253872562afb5559a989aa80928965.png" alt="Shopping online e offline" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Il Futuro dello Shopping è Qui</h2>
+                    <p>Con la nostra app Cashbackapp, trasforma ogni acquisto in un'opportunità di risparmio. Che tu stia comprando online o in negozio, ricevi sempre un cashback garantito.</p>
+                    <ul class="about-features">
+                        <li>✓ Cashback su acquisti online e offline</li>
+                        <li>✓ Oltre 10 milioni di aziende partner</li>
+                        <li>✓ Primo mese completamente gratuito</li>
+                        <li>✓ App mobile disponibile</li>
+                        <li>✓ Pagamenti sicuri e garantiti</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1757660028/pplx_project_search_images/85c66596583e7e8ef598a424b9b4935d82de3bd8.png" alt="App Cashback Mobile" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="vantaggi" class="benefits">
+        <div class="container">
+            <h2 class="section-title">Perché Scegliere il Nostro Cashback</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Risparmio Garantito</h3>
+                    <p>Ottieni cashback su ogni acquisto, sia online che in negozio</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌍</div>
+                    <h3>Rete Estesa</h3>
+                    <p>Oltre 10 milioni di aziende partner in tutto il mondo</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🆓</div>
+                    <h3>Prova Gratuita</h3>
+                    <p>Primo mese completamente gratuito per testare il servizio</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💸</div>
+                    <h3>Conveniente</h3>
+                    <p>Solo 4,90€ al mese per vantaggi illimitati dopo il periodo di prova</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="prezzi" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Piani Tariffari Semplici e Convenienti</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Prova Gratuita</h3>
+                        <div class="price">
+                            <span class="price-amount">0€</span>
+                            <span class="price-period">primo mese</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Cashback 5-15€ al mese</li>
+                        <li>✓ Accesso a tutte le aziende partner</li>
+                        <li>✓ App mobile gratuita</li>
+                        <li>✓ Nessun impegno</li>
+                    </ul>
+                    <a href="https://shp.skai1.com/register/V2tPSHpDZXA3YmhlNW5ScTpN" target="_blank" class="btn btn--outline btn--full-width">Inizia Gratis</a>
+                </div>
+                <div class="pricing-card pricing-card--featured">
+                    <div class="pricing-badge">Più Popolare</div>
+                    <div class="pricing-header">
+                        <h3>Piano Premium</h3>
+                        <div class="price">
+                            <span class="price-amount">4,90€</span>
+                            <span class="price-period">al mese</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Cashback illimitato</li>
+                        <li>✓ Vantaggi esclusivi</li>
+                        <li>✓ Supporto prioritario</li>
+                        <li>✓ Notifiche personalizzate</li>
+                        <li>✓ Statistiche avanzate</li>
+                    </ul>
+                    <a href="https://shp.skai1.com/register/V2tPSHpDZXA3YmhlNW5ScTpN" target="_blank" class="btn btn--primary btn--full-width">Attiva Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="come-funziona" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Come Funziona in 4 Semplici Passi</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Registrati Gratuitamente</h3>
+                        <p>Crea il tuo account gratuito e inizia subito a risparmiare</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Fai Acquisti</h3>
+                        <p>Compra nei tuoi negozi preferiti online e offline</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Guadagna Cashback</h3>
+                        <p>Ricevi automaticamente il cashback su ogni acquisto</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Incassa i Risparmi</h3>
+                        <p>Trasferisci i tuoi guadagni direttamente sul conto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Cosa Dicono i Nostri Clienti</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Fantastico! Ho già risparmiato oltre 150€ nei primi tre mesi. L'app è semplicissima da usare."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Marco R.</strong>
+                        <span>Cliente Premium</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Il cashback arriva sempre puntuale. Perfetto per gli acquisti quotidiani e per lo shopping online."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Giulia S.</strong>
+                        <span>Cliente Premium</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Dopo il primo mese gratuito non ho più potuto farne a meno. Vale ogni centesimo!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Alessandro T.</strong>
+                        <span>Cliente Premium</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contatti" class="contact">
         <div class="container">
-            <h2>Contattaci</h2>
+            <h2 class="section-title">Contattami</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@shoppinginfluencer.shop</p>
+                    <h3>Altin Mehmetaj</h3>
+                    <p class="contact-subtitle">Creators & Influencer Shopping</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <strong>Telefono</strong>
+                                <a href="tel:3518112387">3518112387</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <h3>Telefono</h3>
-                            <p>+39 351 811 2387</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h3>Ubicazione</h3>
-                            <p>Italia</p>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:altin.shopping.influencer@gmail.com">altin.shopping.influencer@gmail.com</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Nome" required>
-                            <input type="email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Messaggio" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Invia Messaggio</button>
-                    </form>
-                </div>
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Messaggio</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Invia Messaggio</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer con Link Legali -->
-    <footer>
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Resta Aggiornato</h3>
+                <p>Iscriviti alla newsletter per ricevere le migliori offerte cashback</p>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" placeholder="La tua email" class="form-control newsletter-input" required>
+                    <button type="submit" class="btn btn--primary">Iscriviti</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Shopping Influencer</h3>
-                    <p>Cashback ogni giorno e ovunque</p>
+                    <h4>Altin Mehmetaj</h4>
+                    <p>Creators & Influencer Shopping</p>
+                    <p>Il tuo partner per il cashback shopping</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Link Utili</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#cashback">Come Funziona</a></li>
-                        <li><a href="#shopping">Partner</a></li>
-                        <li><a href="#contact">Contatti</a></li>
-                    </ul>
+                    <h4>Contatti</h4>
+                    <p>📱 <a href="tel:3518112387">3518112387</a></p>
+                    <p>✉️ <a href="mailto:altin.shopping.influencer@gmail.com">altin.shopping.influencer@gmail.com</a></p>
                 </div>
                 <div class="footer-section">
-                    <h3>Seguici</h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/14KCtBjd5vN/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Facebook</a>
-                        <a href="https://www.instagram.com/shoppingxinfluencer?igsh=aDV6c3lvYmhidmd1&utm_source=qr" target="_blank" rel="noopener">📸 Instagram</a>
-                        <a href="https://www.tiktok.com/@shoppingxinfluencer?_t=ZN-8ziTAVHLFcU&_r=1" target="_blank" rel="noopener">🎵 TikTok</a>
-                        <a href="https://www.youtube.com/@shoppinginfluencer" target="_blank" rel="noopener">▶️ YouTube</a>
-                    </div>
+                    <h4>Link Rapidi</h4>
+                    <a href="#home">Home</a>
+                    <a href="#vantaggi">Vantaggi</a>
+                    <a href="#prezzi">Prezzi</a>
+                    <a href="#come-funziona">Come Funziona</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Informazioni Legali</h3>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="termini-servizio.html">Termini di Servizio</a></li>
-                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                    </ul>
+                    <h4>App</h4>
+                    <a href="https://shp.skai1.com/register/V2tPSHpDZXA3YmhlNW5ScTpN" target="_blank" class="btn btn--primary btn--sm">Scarica l'App</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Shopping Influencer. Tutti i diritti riservati.</p>
+                <p>&copy; 2025 Altin Mehmetaj. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>
