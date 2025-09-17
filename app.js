@@ -40,23 +40,26 @@ function scrollToSection(sectionId) {
 // Handle contact form submission
 function handleFormSubmit(event) {
     event.preventDefault();
-    
+
     const form = event.target;
     const formData = new FormData(form);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-    
-    // Show success message
-    showNotification('Grazie per il tuo messaggio! Ti contatteremo presto.', 'success');
-    
-    // Reset form
-    form.reset();
-    
-    // In a real application, you would send this data to a server
-    // For demo purposes, we'll just log it
-    console.log('Form submitted:', { name, email, message });
+
+    fetch('https://formspree.io/f/mgvljrbk', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+            showNotification('Grazie per il tuo messaggio! Ti contatteremo presto.', 'success');
+            form.reset();
+        } else {
+            showNotification('Errore nell\'invio del modulo.', 'error');
+        }
+    }).catch(() => {
+        showNotification('Errore di rete durante l\'invio.', 'error');
+    });
 }
+
 
 // Handle newsletter subscription
 function handleNewsletterSubmit(event) {
