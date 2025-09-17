@@ -327,13 +327,106 @@
                 <div class="footer-section">
                     <h4>App</h4>
                     <a href="https://shp.skai1.com/register/V2tPSHpDZXA3YmhlNW5ScTpN" target="_blank" class="btn btn--primary btn--sm">Scarica l'App</a>
-                </div>
-            </div>
+                
+            
             <div class="footer-bottom">
+  <p>
+    <a href="privacy.html" target="_blank">Privacy Policy</a> | 
+    <a href="cookie.html" target="_blank">Cookie Policy</a> | 
+    Contatti: <a href="mailto:altin.shopping.influencer@gmail.com">altin.shopping.influencer@gmail.com</a>
+  </p>
+ 
+
+
                 <p>&copy; 2025 Altin Mehmetaj. Tutti i diritti riservati.</p>
             </div>
-        </div>
+    
     </footer>
+                    <style>
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  padding: 15px;
+  text-align:center;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+}
+#cookie-banner button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+#cookie-banner .accept { background-color: #4CAF50; color: white; }
+#cookie-banner .decline { background-color: #f44336; color: white; }
+</style>
+
+<div id="cookie-banner">
+  Questo sito utilizza cookie tecnici e, previo consenso, cookie per analisi e marketing.
+  <button class="accept" onclick="acceptCookies()">Accetta</button>
+  <button class="decline" onclick="declineCookies()">Rifiuta</button>
+  <a href="cookie.html" style="color:lightblue; margin-left:10px;">Leggi la Cookie Policy</a>
+</div>
+
+<script>
+function setCookie(name, value, days) {
+  let expires = "";
+  if(days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    expires = "; expires=" + d.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function acceptCookies() {
+  setCookie('cookie_consent', 'accepted', 365);
+  document.getElementById('cookie-banner').style.display = 'none';
+  // qui puoi attivare eventuali script extra di terze parti solo dopo il consenso
+}
+
+function declineCookies() {
+  setCookie('cookie_consent', 'declined', 365);
+  document.getElementById('cookie-banner').style.display = 'none';
+  // qui puoi bloccare script non tecnici non essenziali
+}
+
+window.onload = function(){
+  if(document.cookie.indexOf('cookie_consent=') !== -1){
+    document
+<script>
+function setCookie(name, value, days) {
+  let expires = "";
+  if(days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    expires = "; expires=" + d.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function acceptCookies() {
+  setCookie('cookie_consent', 'accepted', 365);
+  document.getElementById('cookie-banner').style.display = 'none';
+  // qui puoi attivare eventuali script extra di terze parti solo dopo il consenso
+}
+
+function declineCookies() {
+  setCookie('cookie_consent', 'declined', 365);
+  document.getElementById('cookie-banner').style.display = 'none';
+  // qui puoi bloccare script non tecnici non essenziali
+}
+
+window.onload = function(){
+  if(document.cookie.indexOf('cookie_consent=') !== -1){
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+};
+</script>
+
 
     <script src="app.js"></script>
 </body>
