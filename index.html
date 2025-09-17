@@ -394,31 +394,6 @@ function declineCookies() {
   // qui puoi bloccare script non tecnici non essenziali
 }
 
-window.onload = function(){
-  if(document.cookie.indexOf('cookie_consent=') !== -1){
-    document
-<script>
-function setCookie(name, value, days) {
-  let expires = "";
-  if(days) {
-    const d = new Date();
-    d.setTime(d.getTime() + (days*24*60*60*1000));
-    expires = "; expires=" + d.toUTCString();
-  }
-  document.cookie = name + "=" + value + expires + "; path=/";
-}
-
-function acceptCookies() {
-  setCookie('cookie_consent', 'accepted', 365);
-  document.getElementById('cookie-banner').style.display = 'none';
-  // qui puoi attivare eventuali script extra di terze parti solo dopo il consenso
-}
-
-function declineCookies() {
-  setCookie('cookie_consent', 'declined', 365);
-  document.getElementById('cookie-banner').style.display = 'none';
-  // qui puoi bloccare script non tecnici non essenziali
-}
 
 window.onload = function(){
   if(document.cookie.indexOf('cookie_consent=') !== -1){
