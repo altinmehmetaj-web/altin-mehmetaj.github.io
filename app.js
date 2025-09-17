@@ -46,8 +46,7 @@ function handleFormSubmit(event) {
 
     fetch('https://formspree.io/f/mgvljrbk', {
         method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
+        body: formData
     }).then(response => {
         if (response.ok) {
             showNotification('Grazie per il tuo messaggio! Ti contatteremo presto.', 'success');
@@ -59,7 +58,6 @@ function handleFormSubmit(event) {
         showNotification('Errore di rete durante l\'invio.', 'error');
     });
 }
-
 
 // Handle newsletter subscription
 function handleNewsletterSubmit(event) {
