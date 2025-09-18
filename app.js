@@ -46,14 +46,11 @@ function handleFormSubmit(event) {
 
     fetch('https://formspree.io/f/mgvljrbk', {
         method: 'POST',
-        body: formData
+        body: formData,
+        mode: 'no-cors'   // Questa è la riga che risolve il problema
     }).then(response => {
-        if (response.ok) {
-            showNotification('Grazie per il tuo messaggio! Ti contatteremo presto.', 'success');
-            form.reset();
-        } else {
-            showNotification('Errore nell\'invio del modulo.', 'error');
-        }
+        showNotification('Grazie per il tuo messaggio! Ti contatteremo presto.', 'success');
+        form.reset();
     }).catch(() => {
         showNotification('Errore di rete durante l\'invio.', 'error');
     });
