@@ -1402,34 +1402,6 @@ select.form-control {
   border-radius: 15px;
   color: white;
 }
-
-.testimonials-cta h3 {
-  font-size: 2rem;
-  margin-bottom: 25px;
-  color: white;
-}
-
-.btn-testimonial {
-  display: inline-block;
-  background-color: #25D366;
-  color: white;
-  padding: 15px 45px;
-  border-radius: 8px;
-  font-size: 1.15rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-testimonial:hover {
-  background-color: #20ba5a;
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-}
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav {
