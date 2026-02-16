@@ -1393,14 +1393,7 @@ select.form-control {
 .testimonial-author span {
   color: #999;
   font-size: 0.9rem;
-}
 
-/* CTA FINALE */
-.testimonials-cta {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 50px 40px;
-  border-radius: 15px;
-  color: white;
 }
 /* Responsive Design */
 @media (max-width: 768px) {
